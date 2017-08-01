@@ -5,7 +5,7 @@ HOST: http://polls.apiblueprint.org/
 
 Polls is a simple API allowing consumers to view polls and vote in them.
 
-## Questions Collection [/questions]
+## Questions Collection [/api]
 
 ### List All Questions [GET]
 
@@ -13,68 +13,566 @@ Polls is a simple API allowing consumers to view polls and vote in them.
 
         [
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
+                "blog" : [ {
+                    "brief" : "We are proud to announce...",
+                    "id" : "announced",
+                    "image" : "/images/posts/announce.jpg",
+                    "posted" : "2016-11-23",
+                    "primaryColor" : "#00a6ec",
+                    "secondaryColor" : "#00a6ec",
+                    "title" : "Conference Announced"
+                }],
+                "partners" : [ {
+                    "logos" : [ {
+                        "logoUrl" : "../images/logos/partner.jpg",
+                        "name" : "Partner",
+                        "url" : "https://www.partner.com/"
+                    }],
+                    "logosClass" : "large",
+                    "title" : "general-sponsors",
+                    "titleClass" : "largeTitle"
+                }, {
+                    "logos" : [ {
+                      "logoUrl" : "../images/logos/partner.png",
+                      "name" : "Partner Ltd",
+                      "url" : "http://partner.com/"
+                    }],
+                    "logosClass" : "medium",
+                    "title" : "premium-sponsors",
+                    "titleClass" : "mediumTitle"
+                  }, {
+                    "logos" : [ {
+                      "logoUrl" : "../images/logos/partner.png",
+                      "name" : "partner",
+                      "url" : "http://partner.com/"
+                    }],
+                    "logosClass" : "medium",
+                    "title" : "standard-sponsors"
+                  }, {
+                    "logos" : [ {
+                      "logoUrl" : "../images/logos/partner.png",
+                      "name" : "partner",
+                      "url" : "https://www.partner.com/"
+                    }],
+                    "logosClass" : "medium",
+                    "title" : "partners"
+                  }, {
+                    "logos" : [ {
+                      "logoUrl" : "../images/logos/partner.png",
+                      "name" : "partner",
+                      "url" : "https://partner.com"
+                    }],
+                    "logosClass" : "medium",
+                    "title" : "event-organizers",
+                    "titleClass" : "organizersTitle"
+                  }, {
+                    "logos" : [ {
+                      "logoUrl" : "../images/logos/partner.png",
+                      "name" : "partner",
+                      "url" : "http://partner.com/"
+                    }],
+                    "logosClass" : "medium",
+                    "title" : "other-friends",
+                    "titleClass" : "friendsTitle"
+                  } ],
+                  "resources" : {
+                    "action" : "See how it was",
+                    "action-title" : "Conference",
+                    "added-to-schedule" : "Added to My Schedule",
+                    "back-to-top" : "Back to top",
+                    "become-a-partner" : "Become a partner",
+                    "before-hashtag" : "What's up",
+                    "blind-ticket" : "Blind Bird",
+                    "blind-ticket-ends" : "January 4",
+                    "blind-ticket-info" : "Or first 100 tickets",
+                    "blind-ticket-starts" : "December 19",
+                    "blog" : "Blog",
+                    "browse-more" : "Browse more events",
+                    "buy-ticket" : "Buy ticket",
+                    "c4p" : "Become a speaker",
+                    "call-for-papers" : "Call for Papers",
+                    "clear-all" : "Clear all",
+                    "click-to-view-photos" : "Click here to view more photos",
+                    "close" : "Close",
+                    "contact-us" : "Contact us",
+                    "continue-reading" : "Continue reading",
+                    "copy-link" : "Copy link",
+                    "dates" : "May 15 - 17, 2017",
+                    "dates-header" : "May 15-17",
+                    "days" : "Days",
+                    "description" : "Description",
+                    "early-ticket" : "Early Bird",
+                    "early-ticket-ends" : "February 7",
+                    "early-ticket-info" : "Or first 100 tickets",
+                    "early-ticket-starts" : "January 5",
+                    "event-organizers" : "Organizers of the Event",
+                    "featured-people-title" : "Rockstar Speakers",
+                    "featured-people-view-all" : "View all speakers",
+                    "featured-videos-title" : "Featured  Sessions",
+                    "featured-videos-view-all" : "View all videos",
+                    "filter" : "Filter",
+                    "filtered-by" : "filtered by",
+                    "for-partners" : "For Partners",
+                    "for-visitors" : "For visitors",
+                    "general-partner" : "General partner",
+                    "general-sponsors" : "General Sponsors",
+                    "home" : "Home",
+                    "latest-news" : "Latest news",
+                    "lazy-ticket" : "Last Chance",
+                    "lazy-ticket-ends" : "May 15",
+                    "lazy-ticket-info" : "",
+                    "lazy-ticket-starts" : "April 18",
+                    "location-address" : "13 steet iela",
+                    "location-address-short" : "Riga, Latvia",
+                    "location-description" : "Description",
+                    "location-title" : "Location",
+                    "mail-list" : "Mailing list",
+                    "media-kit" : "Media Kit",
+                    "my-schedule" : "My Schedule",
+                    "normal-ticket" : "Normal",
+                    "normal-ticket-ends" : "April 17",
+                    "normal-ticket-info" : "",
+                    "normal-ticket-starts" : "February 8",
+                    "other-friends" : "... and our friends",
+                    "participants" : "Participants",
+                    "partners" : "Partners",
+                    "partnership-proposition" : "Partnership Proposition",
+                    "play-icon" : "See how it was in 2016",
+                    "premium-sponsors" : "Premium Sponsors",
+                    "rdd-15" : "Conference",
+                    "rdd-16" : "Conference",
+                    "read-more" : "Read more",
+                    "removed-from-schedule" : "Removed from My Schedule",
+                    "run-out-tickets" : "We have run out all our tickets",
+                    "schedule" : "Schedule",
+                    "sessions" : "Sessions",
+                    "share" : "Share",
+                    "share-with" : "Share with",
+                    "sign-in" : "Sign in",
+                    "sign-out" : "Sign out",
+                    "social-motto" : "Add to circles, like, follow or connect with us on",
+                    "social-title" : "Social",
+                    "sold-out-tickets" : "Sold Out",
+                    "speakers" : "Speakers",
+                    "standard-sponsors" : "Standard Sponsors",
+                    "subscribe" : "Subscribe",
+                    "subscribe-note" : "No spam, only the latest news and updates!",
+                    "tags" : "Tags",
+                    "team" : "Team",
+                    "team-page-text" : "Conference",
+                    "team-page-title" : "Team",
+                    "tickets-details" : "Tickets grant access to all conference sections, coffee breaks, lunch and party. Accommodation is NOT included in the ticket price.",
+                    "tickets-not-available" : "Not Available",
+                    "tickets-title" : "Tickets",
+                    "title" : "Conference",
+                    "view-presentation" : "View presentation",
+                    "view-video" : "View video",
+                    "you-should-sign-in" : "Sign in to save sessions",
+                    "your-email" : "Your email"
+                  },
+                  "schedule" : [ {
+                    "date" : "2017-05-15",
+                    "dateReadable" : "May 15",
+                    "timeslots" : [ {
+                      "endTime" : "9:45",
+                      "sessions" : [ [ 1 ] ],
+                      "startTime" : "08:30"
+                    },{
+                      "endTime" : "10.00",
+                      "sessions" : [ [ 101 ], [ 101 ], [ 101 ], [ 101 ], [ 101 ] ],
+                      "startTime" : "9:45"
+                    }],
+                    "tracks" : [ {
+                      "capacity" : 129,
+                      "title" : "Room 10"
                     }, {
-                        "choice": "Python",
-                        "votes": 1024
+                      "capacity" : 131,
+                      "title" : "Room 13"
                     }, {
-                        "choice": "Objective-C",
-                        "votes": 512
+                      "capacity" : 182,
+                      "title" : "Room 3"
                     }, {
-                        "choice": "Ruby",
-                        "votes": 256
+                      "capacity" : 96,
+                      "title" : "Room 5"
+                    }, {
+                      "capacity" : 96,
+                      "title" : "Room 6"
+                    } ]
+                  }, {
+                    "date" : "2017-05-16",
+                    "dateReadable" : "May 16",
+                    "timeslots" : [ {
+                      "endTime" : "9:30",
+                      "sessions" : [ [ 1 ] ],
+                      "startTime" : "08:30"
+                    }, {
+                      "endTime" : "10:00",
+                      "sessions" : [ [ 101 ], [ 101 ], [ 101 ], [ 101 ], [ 101 ] ],
+                      "startTime" : "9:30"
+                    } ],
+                    "tracks" : [ {
+                      "capacity" : 129,
+                      "title" : "Room 10"
+                    }, {
+                      "capacity" : 131,
+                      "title" : "Room 13"
+                    }, {
+                      "capacity" : 182,
+                      "title" : "Room 3"
+                    }, {
+                      "capacity" : 96,
+                      "title" : "Room 5"
+                    }, {
+                      "capacity" : 96,
+                      "title" : "Room 6"
+                    } ]
+                  }, {
+                    "date" : "2017-05-17",
+                    "dateReadable" : "May 17 (Workshops)",
+                    "timeslots" : [ {
+                      "endTime" : "12:00",
+                      "sessions" : [ [ 101 ], [ 101 ], [ 101 ], [ 101 ] ],
+                      "startTime" : "9:00"
+                    }, {
+                      "endTime" : "13:00",
+                      "sessions" : [ [ 1 ] ],
+                      "startTime" : "12:00"
+                    }],
+                    "tracks" : [ {
+                      "capacity" : 50,
+                      "title" : "Room 1"
+                    }, {
+                      "capacity" : 20,
+                      "title" : "Room 2"
+                    }, {
+                      "capacity" : 60,
+                      "title" : "Room 3"
+                    }, {
+                      "capacity" : 20,
+                      "title" : "Room 4"
+                    }, {
+                      "capacity" : 20,
+                      "title" : "Room 5"
+                    } ]
+                  } ],
+                  "sessions" : {
+                    "1" : {
+                      "auditorium" : "Hall",
+                      "description" : "Get your badge, coffee, enjoy talking with colleagues around",
+                      "id" : 1,
+                      "image" : "/images/backgrounds/registration.jpg",
+                      "title" : "Registration & Morning Coffee"
+                    },
+                    "101" : {
+                      "complexity" : "Intermediate",
+                      "description" : "Presentation",
+                      "id" : 101,
+                      "speakers" : [ 1 ],
+                      "tags" : [ "Java" ],
+                      "title" : "Super Presentation"
                     }
-                ]
+                  },
+                  "settings" : {
+                    "addtocalendar" : [ {
+                      "title" : "iCalendar",
+                      "url" : "http://addtocalendar.com/atc/ical?f=m&e[0][date_start]=2017-05-15%209%3A00%3A00&e[0][date_end]=2017-05-17%2018%3A00%3A00&e[0][timezone]=Europe%2FRiga&e[0][title]=Riga%20Dev%20Days%202017&e[0][description]=The%20biggest%20tech%20conference%20in%20Baltic%20States%20organized%20by%20three%20user%20groups%20in%20Latvia%3A%20Java%20User%20Group%20Latvia%2C%20Google%20Developer%20Group%20Riga%2C%20Oracle%20User%20Group%20Latvia.%20All%20about%20Java%2C%20Web%20and%20flexibility%2C%20and%20Lower%20Cost%20with%20Oracle%20and%20Open%20Source&e[0][location]=Forum%20Cinemas%2C%2013%20janv%C4%81ra%20iela%2C%20Riga%2C%20Latvia&e[0][organizer]=Riga%20Dev%20Days%202017&e[0][organizer_email]=info%40rigadevday.lv&e[0][privacy]=public"
+                    }, {
+                      "title" : "Google Calendar",
+                      "url" : "http://addtocalendar.com/atc/google?f=m&e[0][date_start]=2017-05-15%209%3A00%3A00&e[0][date_end]=2017-05-17%2018%3A00%3A00&e[0][timezone]=Europe%2FRiga&e[0][title]=Riga%20Dev%20Days%202017&e[0][description]=The%20biggest%20tech%20conference%20in%20Baltic%20States%20organized%20by%20three%20user%20groups%20in%20Latvia%3A%20Java%20User%20Group%20Latvia%2C%20Google%20Developer%20Group%20Riga%2C%20Oracle%20User%20Group%20Latvia.%20All%20about%20Java%2C%20Web%20and%20flexibility%2C%20and%20Lower%20Cost%20with%20Oracle%20and%20Open%20Source&e[0][location]=Forum%20Cinemas%2C%2013%20janv%C4%81ra%20iela%2C%20Riga%2C%20Latvia&e[0][organizer]=Riga%20Dev%20Days%202017&e[0][organizer_email]=info%40rigadevday.lv&e[0][privacy]=public"
+                    }, {
+                      "title" : "Outlook",
+                      "url" : "http://addtocalendar.com/atc/outlook?f=m&e[0][date_start]=2017-05-15%209%3A00%3A00&e[0][date_end]=2017-05-17%2018%3A00%3A00&e[0][timezone]=Europe%2FRiga&e[0][title]=Riga%20Dev%20Days%202017&e[0][description]=The%20biggest%20tech%20conference%20in%20Baltic%20States%20organized%20by%20three%20user%20groups%20in%20Latvia%3A%20Java%20User%20Group%20Latvia%2C%20Google%20Developer%20Group%20Riga%2C%20Oracle%20User%20Group%20Latvia.%20All%20about%20Java%2C%20Web%20and%20flexibility%2C%20and%20Lower%20Cost%20with%20Oracle%20and%20Open%20Source&e[0][location]=Forum%20Cinemas%2C%2013%20janv%C4%81ra%20iela%2C%20Riga%2C%20Latvia&e[0][organizer]=Riga%20Dev%20Days%202017&e[0][organizer_email]=info%40rigadevday.lv&e[0][privacy]=public"
+                    }, {
+                      "title" : "Outlook online",
+                      "url" : "http://addtocalendar.com/atc/outlookonline?f=m&e[0][date_start]=2017-05-15%209%3A00%3A00&e[0][date_end]=2017-05-17%2018%3A00%3A00&e[0][timezone]=Europe%2FRiga&e[0][title]=Riga%20Dev%20Days%202017&e[0][description]=The%20biggest%20tech%20conference%20in%20Baltic%20States%20organized%20by%20three%20user%20groups%20in%20Latvia%3A%20Java%20User%20Group%20Latvia%2C%20Google%20Developer%20Group%20Riga%2C%20Oracle%20User%20Group%20Latvia.%20All%20about%20Java%2C%20Web%20and%20flexibility%2C%20and%20Lower%20Cost%20with%20Oracle%20and%20Open%20Source&e[0][location]=Forum%20Cinemas%2C%2013%20janv%C4%81ra%20iela%2C%20Riga%2C%20Latvia&e[0][organizer]=Riga%20Dev%20Days%202017&e[0][organizer_email]=info%40rigadevday.lv&e[0][privacy]=public"
+                    }, {
+                      "title" : "Yahoo",
+                      "url" : "http://addtocalendar.com/atc/yahoo?f=m&e[0][date_start]=2017-05-15%209%3A00%3A00&e[0][date_end]=2017-05-17%2018%3A00%3A00&e[0][timezone]=Europe%2FRiga&e[0][title]=Riga%20Dev%20Days%202017&e[0][description]=The%20biggest%20tech%20conference%20in%20Baltic%20States%20organized%20by%20three%20user%20groups%20in%20Latvia%3A%20Java%20User%20Group%20Latvia%2C%20Google%20Developer%20Group%20Riga%2C%20Oracle%20User%20Group%20Latvia.%20All%20about%20Java%2C%20Web%20and%20flexibility%2C%20and%20Lower%20Cost%20with%20Oracle%20and%20Open%20Source&e[0][location]=Forum%20Cinemas%2C%2013%20janv%C4%81ra%20iela%2C%20Riga%2C%20Latvia&e[0][organizer]=Riga%20Dev%20Days%202017&e[0][organizer_email]=info%40rigadevday.lv&e[0][privacy]=public"
+                    } ],
+                    "callForPapersLink" : "https://goo.gl/forms/Sy4J6mViU8RF9rCo1",
+                    "callToAction" : {
+                      "videoId" : "a2me0sS1ir4",
+                      "videoTitle" : "action-title"
+                    },
+                    "contactBlock" : {
+                      "links" : [ {
+                        "text" : "info@mail.com",
+                        "url" : "mailto:info@mail.com"
+                      }, {
+                        "text" : "Press Kit",
+                        "url" : "/media/"
+                      } ]
+                    },
+                    "disqusShortName" : "hoverboard-gdg-x",
+                    "footerBlocks" : [ {
+                      "links" : [ {
+                        "text" : "team",
+                        "url" : "/team/"
+                      }, {
+                        "newTab" : true,
+                        "text" : "rdd-15",
+                        "url" : "https://2015.conference.com"
+                      }, {
+                        "newTab" : true,
+                        "text" : "rdd-16",
+                        "url" : "https://2016.conference.com"
+                      } ],
+                      "title" : "for-visitors"
+                    } ],
+                    "gallery" : {
+                      "albumUrl" : "link to album",
+                      "photos" : {
+                        "big" : "/images/backgrounds/2016_1.jpg",
+                        "small" : [ "/images/backgrounds/2016_2.jpg", "/images/backgrounds/2016_3.jpg" ]
+                      }
+                    },
+                    "hashtag" : "hashtag",
+                    "languages" : [ {
+                      "key" : "en",
+                      "name" : "English"
+                    } ],
+                    "location" : {
+                      "apiKey" : "AIzaSyAmzFg9hVFWjchXV9S1LelDgDPZC-koXHE",
+                      "images" : [ "/images/backgrounds/location_fc_1.jpg", "/images/backgrounds/location_fc_2.jpg", "/images/backgrounds/location_fc_3.jpg" ],
+                      "link" : "https://www.facebook.com/location",
+                      "mapCenter" : {
+                        "latitude" : 56.946341,
+                        "longitude" : 24.12
+                      },
+                      "pointer" : {
+                        "latitude" : 56.946341,
+                        "longitude" : 24.116838,
+                        "zoom" : 16
+                      }
+                    },
+                    "mailchimp" : {
+                      "link-url" : "link",
+                      "name" : "b_b7e853a79164ddfdbda3ed77b_7993e39fbe",
+                      "url" : "link"
+                    },
+                    "navigation" : [ {
+                      "permalink" : "/",
+                      "route" : "home"
+                    }, {
+                      "permalink" : "/speakers/",
+                      "route" : "speakers"
+                    }, {
+                      "permalink" : "/schedule/",
+                      "route" : "schedule"
+                    }, {
+                      "permalink" : "/blog/",
+                      "route" : "blog"
+                    }, {
+                      "permalink" : "/team/",
+                      "route" : "team"
+                    } ],
+                    "pages" : {
+                      "blog" : {
+                        "headerSettings" : {
+                          "actionButtonBackgroundColor" : "#fffeff",
+                          "actionButtonColor" : "#00a6ec",
+                          "actionLinkColor" : "#fffeff",
+                          "backgroundColor" : "#00a6ec",
+                          "backgroundImage" : "/images/backgrounds/speakers-background.jpg",
+                          "fontColor" : "#fff",
+                          "mainColor" : "fffeff",
+                          "tabBarColor" : "#fff"
+                        }
+                      },
+                      "home" : {
+                        "headerSettings" : {
+                          "backgroundColor" : "#fff",
+                          "backgroundImage" : "/images/backgrounds/home.png",
+                          "fontColor" : "#fff",
+                          "hideLogo" : true,
+                          "minHeight" : "360px",
+                          "mobileBackgroundImage" : "/images/backgrounds/home-mobile.png",
+                          "tabBarColor" : "#fff",
+                          "video" : {
+                            "text" : "See how it was in 2016",
+                            "title" : "Riga Dev Days 2016",
+                            "youtubeId" : "RxIdnUSi_Kw"
+                          }
+                        }
+                      },
+                      "media" : {
+                        "headerSettings" : {
+                          "actionButtonBackgroundColor" : "#fffeff",
+                          "actionButtonColor" : "#00a6ec",
+                          "actionLinkColor" : "#fffeff",
+                          "backgroundColor" : "#00a6ec",
+                          "fontColor" : "#fff",
+                          "mainColor" : "fffeff",
+                          "tabBarColor" : "#fff"
+                        }
+                      },
+                      "schedule" : {
+                        "headerSettings" : {
+                          "actionButtonBackgroundColor" : "#fffeff",
+                          "actionButtonColor" : "#00a6ec",
+                          "actionLinkColor" : "#fffeff",
+                          "backgroundColor" : "#00a6ec",
+                          "backgroundImage" : "/images/backgrounds/speakers-background.jpg",
+                          "fontColor" : "#fff",
+                          "mainColor" : "fffeff",
+                          "tabBarColor" : "#fff"
+                        }
+                      },
+                      "speakers" : {
+                        "headerSettings" : {
+                          "actionButtonBackgroundColor" : "#fffeff",
+                          "actionButtonColor" : "#00a6ec",
+                          "actionLinkColor" : "#fffeff",
+                          "backgroundColor" : "#00a6ec",
+                          "backgroundImage" : "/images/backgrounds/speakers-background.jpg",
+                          "fontColor" : "#fff",
+                          "mainColor" : "fffeff",
+                          "tabBarColor" : "#fff"
+                        }
+                      },
+                      "team" : {
+                        "headerSettings" : {
+                          "actionButtonBackgroundColor" : "#fffeff",
+                          "actionButtonColor" : "#00a6ec",
+                          "actionLinkColor" : "#fffeff",
+                          "backgroundColor" : "#00a6ec",
+                          "backgroundImage" : "/images/backgrounds/speakers-background.jpg",
+                          "fontColor" : "#fff",
+                          "mainColor" : "fffeff",
+                          "tabBarColor" : "#fff"
+                        }
+                      }
+                    },
+                    "partnershipProposition" : "mailto:info@mail.com?subject=Mail Partnership",
+                    "social" : [ {
+                      "name" : "twitter",
+                      "nickname" : "twitter",
+                      "url" : "https://twitter.com/twitter"
+                    }, {
+                      "name" : "gplus",
+                      "nickname" : "1043467236269517",
+                      "url" : "https://plus.google.com/10433645688269517/posts"
+                    }, {
+                      "name" : "facebook",
+                      "nickname" : "facebook",
+                      "url" : "https://www.facebook.com/facebook"
+                    }, {
+                      "name" : "linkedin",
+                      "nickname" : "riga-dev-day",
+                      "url" : "https://www.linkedin.com/groups/Github/about"
+                    }, {
+                      "name" : "github",
+                      "nickname" : "Github",
+                      "url" : "https://github.com/Github"
+                    } ],
+                    "statistics" : [ {
+                      "caption" : "participants",
+                      "counter" : "600+",
+                      "resource" : "images/icons/statistics-man.png"
+                    }, {
+                      "caption" : "sessions",
+                      "counter" : "50+",
+                      "resource" : "images/icons/statistics-presentations.png"
+                    }, {
+                      "caption" : "speakers",
+                      "counter" : "35+",
+                      "resource" : "images/icons/statistics-speakers.png"
+                    }, {
+                      "caption" : "days",
+                      "counter" : "3",
+                      "resource" : "images/icons/statistics-days.png"
+                    } ],
+                    "teamPageText" : "team-page-text",
+                    "teamPageTitle" : "team-page-title",
+                    "tickets" : {
+                      "elements" : [ {
+                        "available" : false,
+                        "currency" : "€",
+                        "ends" : "blind-ticket-ends",
+                        "info" : "blind-ticket-info",
+                        "name" : "blind-ticket",
+                        "price1day" : 99,
+                        "price2day" : 168,
+                        "soldOut" : false,
+                        "starts" : "blind-ticket-starts"
+                      }],
+                      "url" : "link"
+                    },
+                    "tweetsSource" : "/data/tweets.json",
+                    "url" : "https://rigadevdays.lv/",
+                    "videosSessionsUrl" : "https://www.youtube.com/playlist?list=PLqeW-tcDRRwv2lKqKu8kDvsJ-8AeUlYwu"
+                  },
+                  "speakers" : [ null, {
+                    "badges" : [ {
+                      "description" : "Java Champion",
+                      "link" : "https://java.net/website/java-champions",
+                      "name" : "Java Champion"
+                    } ],
+                    "bio" : "bio",
+                    "company" : "Champion",
+                    "country" : "Greece",
+                    "featured" : true,
+                    "id" : 1,
+                    "name" : "Speaker",
+                    "photoUrl" : "/images/people/speaker.jpg",
+                    "shortBio" : "shortBio",
+                    "socials" : [ {
+                      "icon" : "twitter",
+                      "link" : "https://twitter.com/speaker/",
+                      "name" : "Twitter"
+                    } ],
+                    "tags" : [ "general" ],
+                    "title" : "Tea boy"
+                  }],
+                  "tags" : [ {
+                    "general" : " #bdbdbd"
+                  }],
+              "team" : [ {
+                "members" : [ {
+                  "name" : "Conference Guy",
+                  "photoUrl" : "/images/people/conference_guy.jpg",
+                  "socials" : [ {
+                    "icon" : "twitter",
+                    "link" : "https://twitter.com/conference_guy",
+                    "name" : "Twitter"
+                  }, {
+                    "icon" : "linkedin",
+                    "link" : "https://lv.linkedin.com/pub/conference_guy",
+                    "name" : "Linkedin"
+                  } ]
+                }],
+                "title" : "Core Team"
+              }],
+              "userFeedbacks" : {
+                "0KkdOK3fDDetTnAAt41bj9pkgmn2" : {
+                  "101" : {
+                    "comment" : "",
+                    "qualityOfContent" : 5,
+                    "speakerPerformance" : 5
+                  }
+                }
+              },
+              "userSessions" : {
+                "3Q8SZzdgOLfPs1PrHtywsTcyhov2" : {
+                  "1" : true,
+                  "101" : null
+                }
+              },
+              "venues" : [ {
+                "address" : "Cinema",
+                "coordinates" : "56.946323,24.1168107",
+                "description" : "Description",
+                "imageUrl" : "/images/backgrounds/location.jpg",
+                "name" : "Cinema",
+                "title" : "Conference",
+                "web" : "http://www.cinema.com"
+              }],
+              "videos" : [ {
+                "speakers" : "Speaker",
+                "thumbnail" : "/images/sessions/video.jpg",
+                "title" : "Kotlin",
+                "youtubeId" : "RLXmOjoAnZY"
+              }]
             }
+
         ]
-
-### Create a New Question [POST]
-
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
-
-+ Request (application/json)
-
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
-
-+ Response 201 (application/json)
-
-    + Headers
-
-            Location: /questions/2
-
-    + Body
-
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
-            }
